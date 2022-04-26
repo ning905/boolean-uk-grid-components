@@ -31,26 +31,74 @@
 
       /* Write CSS Here */
 
+
+      .two-column-grid__expand-two {
+        display: grid;
+        gap: 5px;
+        grid-template-columns: 0.15fr 1fr;
+      }
+
       .three-column-grid {
+        display: grid;
+        gap: 5px;
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .logo {
+        min-width: 40px;
+        min-height: 40px;
+        border: 2px dotted lightgreen;
       }
 
       .three-column-grid__expand-two {
+        display: grid;
+        gap: 5px;
+        grid-template-columns: 0.03fr 1fr 0.03fr;
       }
 
       .five-column-grid {
+        display: grid;
+        gap: 5px;
+        grid-template-columns: repeat(5, 1fr);
       }
 
       .center-grid {
+        display: grid;
+        place-items: center;
       }
 
       .centered {
+        width: 25%;
       }
 
       /* Grid within Grid Section */
       /* Practice re-using classes */
 
       .two-column-grid {
+        display: grid;
+        gap: 5px;
+        grid-template-columns: repeat(2, 1fr);
       }
+
+      .two-column-grid .box {
+        display: grid;
+        gap: 5px;
+        grid-auto-flow: column;
+      }
+
+      .gwg-container {
+        display: grid;
+        gap: 5px;
+        grid-template-columns: auto 1fr auto;
+      }
+
+      .gwg-container .box {
+        display: grid;
+        gap: 5px;
+        grid-auto-flow: column;
+      }
+
+
     </style>
   </head>
   <body>
@@ -112,7 +160,7 @@
     </div>
     <div>
       <h2>Grid within Grid #2 (Expansion)</h2>
-      <div class="container">
+      <div class="container gwg-container">
         <div class="box">
           <div class="inner-box"></div>
         </div>
